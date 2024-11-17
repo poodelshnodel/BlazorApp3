@@ -1,0 +1,26 @@
+﻿@page "/7Boom"
+
+<h3>_7Boom</h3>
+
+
+
+@code {
+    public string Boom(int i)
+    {
+        int num = i;
+        if (i % 7 == 0)
+            return "Boom ";
+        while (i != 0)
+        {
+            if (i % 10 == 7)
+                return "Boom ";
+            i = i / 10;
+        }
+        return num.ToString() + " ";
+    }
+}
+ @for (int i = 1; i <= 100; i++)
+{
+    <span>@Boom(@i)</span>
+}
+      
